@@ -1,0 +1,62 @@
+[
+  {
+    "id": "job_1",
+    "title": "Need 3 People for Packaging",
+    "description": "Need 3 reliable people to help with packaging products today from 2-6 PM. Light physical work. Friendly team environment.",
+    "status": "new",
+    "workersNeeded": 3,
+    "duration": 4,
+    "durationType": "hours",
+    "location": "Kigali, Kimironko",
+    "pay": "5,000 RWF",
+    "skills": ["physical-labor", "packaging"],
+    "poster": {
+      "name": "John Doe",
+      "phone": "+250 788 123 456"
+    },
+    "acceptedBy": [],
+    "createdAt": "2025-01-15T10:00:00Z",
+    "updatedAt": "2025-01-15T10:00:00Z",
+    "views": 45
+  },
+  {
+    "id": "job_2",
+    "title": "Plumber Needed - Urgent",
+    "description": "Water leak in bathroom needs immediate fixing. Experience required.",
+    "status": "new",
+    "workersNeeded": 1,
+    "duration": 2,
+    "durationType": "hours",
+    "location": "Kigali, Kimironko",
+    "pay": "15,000 RWF",
+    "skills": ["plumbing", "emergency"],
+    "poster": {
+      "name": "Jane Smith",
+      "phone": "+250 788 987 654"
+    },
+    "acceptedBy": [],
+    "createdAt": "2025-01-15T09:30:00Z",
+    "updatedAt": "2025-01-15T09:30:00Z",
+    "views": 28
+  },
+  {
+    "id": "job_3",
+    "title": "Crochet Trainer for Workshop",
+    "description": "Need experienced crochet artist to teach one-day workshop for beginners.",
+    "status": "new",
+    "workersNeeded": 1,
+    "duration": 1,
+    "durationType": "days",
+    "location": "Kigali, Nyamirambo",
+    "pay": "20,000 RWF",
+    "skills": ["teaching", "handicraft"],
+    "poster": {
+      "name": "Marie Claire",
+      "phone": "+250 788 555 111"
+    },
+    "acceptedBy": [],
+    "createdAt": "2025-01-15T08:00:00Z",
+    "updatedAt": "2025-01-15T08:00:00Z",
+    "views": 15
+  }
+]
