@@ -1,0 +1,82 @@
+[
+  {
+    "id": "worker_1",
+    "name": "Sarah Kamanzi",
+    "phone": "+250 788 111 222",
+    "skills": ["physical-labor", "packaging", "cleaning"],
+    "location": "Kigali, Kimironko",
+    "badges": ["reliable", "fast"],
+    "stats": {
+      "jobsCompleted": 15,
+      "responseRate": 95,
+      "avgResponseTime": 5,
+      "reliability": 92
+    },
+    "acceptedJobs": [],
+    "createdAt": "2024-12-01T00:00:00Z"
+  },
+  {
+    "id": "worker_2",
+    "name": "James Mugisha",
+    "phone": "+250 788 333 444",
+    "skills": ["physical-labor", "packaging", "driving", "construction"],
+    "location": "Kigali, Kicukiro",
+    "badges": ["skilled", "reliable"],
+    "stats": {
+      "jobsCompleted": 32,
+      "responseRate": 88,
+      "avgResponseTime": 12,
+      "reliability": 85
+    },
+    "acceptedJobs": [],
+    "createdAt": "2024-11-15T00:00:00Z"
+  },
+  {
+    "id": "worker_3",
+    "name": "Alice Uwase",
+    "phone": "+250 788 666 777",
+    "skills": ["plumbing", "electrical"],
+    "location": "Kigali, Remera",
+    "badges": ["skilled", "verified"],
+    "stats": {
+      "jobsCompleted": 58,
+      "responseRate": 96,
+      "avgResponseTime": 8,
+      "reliability": 96
+    },
+    "acceptedJobs": [],
+    "createdAt": "2024-10-01T00:00:00Z"
+  },
+  {
+    "id": "worker_4",
+    "name": "Emmanuel Nkusi",
+    "phone": "+250 788 888 999",
+    "skills": ["teaching", "tutoring"],
+    "location": "Kigali, Nyamirambo",
+    "badges": ["reliable"],
+    "stats": {
+      "jobsCompleted": 12,
+      "responseRate": 90,
+      "avgResponseTime": 15,
+      "reliability": 88
+    },
+    "acceptedJobs": [],
+    "createdAt": "2024-12-10T00:00:00Z"
+  },
+  {
+    "id": "worker_5",
+    "name": "Grace Mukamana",
+    "phone": "+250 788 222 333",
+    "skills": ["handicraft", "teaching", "cooking"],
+    "location": "Kigali, Nyamirambo",
+    "badges": ["skilled", "reliable"],
+    "stats": {
+      "jobsCompleted": 24,
+      "responseRate": 92,
+      "avgResponseTime": 10,
+      "reliability": 90
+    },
+    "acceptedJobs": [],
+    "createdAt": "2024-11-20T00:00:00Z"
+  }
+]

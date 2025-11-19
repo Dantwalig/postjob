@@ -66,7 +66,7 @@ export async function GET(request: NextRequest) {
 function getMatchReasons(worker: any, job: any): string[] {
   const reasons: string[] = [];
   
-  const skillMatch = job.skills.filter(s => worker.skills.includes(s));
+  const skillMatch = job.skills.filter((s: any) => worker.skills.includes(s));
   if (skillMatch.length > 0) {
     reasons.push(`Skills match: ${skillMatch.join(', ')}`);
   }

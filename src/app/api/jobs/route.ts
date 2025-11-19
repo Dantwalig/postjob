@@ -1,7 +1,9 @@
+// src/app/api/jobs/route.ts
+
 import { NextRequest, NextResponse } from 'next/server';
 import { getJobs, saveJobs } from '@/lib/db';
 import { determineJobStatus } from '@/lib/status';
-import type { Job, JobFilter } from '@/types';
+import type { Job, JobFilter, JobStatus } from '@/types';
 
 export async function GET(request: NextRequest) {
   try {
@@ -45,7 +47,14 @@ export async function GET(request: NextRequest) {
 
     // Sort: hot first, then new, then by created date
     jobs.sort((a, b) => {
-      const statusOrder = { hot: 0, new: 1, filling: 2 };
+      const statusOrder: Record<JobStatus, number> = { 
+        hot: 0, 
+        new: 1, 
+        filling: 2, 
+        filled: 3, 
+        cancelled: 4 
+      };
+      
       if (statusOrder[a.status] !== statusOrder[b.status]) {
         return statusOrder[a.status] - statusOrder[b.status];
       }

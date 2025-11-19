@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getJobs } from '@/lib/db';
+import { getJobs, saveJobs } from '../../../../lib/db';
 import { determineJobStatus } from '@/lib/status';
+import type { Job } from '@/types';
 
 export async function GET(
   request: NextRequest,
@@ -8,7 +9,7 @@ export async function GET(
 ) {
   try {
     const jobs = await getJobs();
-    let job = jobs.find(j => j.id === params.id);
+    let job = jobs.find((j: Job) => j.id === params.id);
 
     if (!job) {
       return NextResponse.json(
@@ -44,7 +45,7 @@ export async function PATCH(
   try {
     const body = await request.json();
     const jobs = await getJobs();
-    const jobIndex = jobs.findIndex(j => j.id === params.id);
+    const jobIndex = jobs.findIndex((j: Job) => j.id === params.id);
 
     if (jobIndex === -1) {
       return NextResponse.json(
@@ -59,7 +60,6 @@ export async function PATCH(
       updatedAt: new Date()
     };
 
-    const { saveJobs } = await import('@/lib/db');
     await saveJobs(jobs);
 
     return NextResponse.json({

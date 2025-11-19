@@ -137,7 +137,7 @@ export function generateMatchingInsights(job: Job, matches: MatchResult[]) {
     avgScore: matches.reduce((sum, m) => sum + m.score, 0) / matches.length,
     topSkills: getTopSkills(matches),
     estimatedFillTime: estimateFillTime(job, matches),
-    recommendations: []
+    recommendations: [] as string[]
   };
   
   // Generate recommendations
