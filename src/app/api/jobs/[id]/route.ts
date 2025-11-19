@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getJobs, saveJobs } from '../../../../lib/db';
+import { getJobs, saveJobs } from '@/lib/db';
 import { determineJobStatus } from '@/lib/status';
 import type { Job } from '@/types';
 
