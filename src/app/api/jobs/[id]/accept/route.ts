@@ -5,12 +5,15 @@ import type { Worker } from '@/types';
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    // Await params first - this is the key change for Next.js 16
+    const { id } = await params;
+    
     const body = await request.json();
     const jobs = await getJobs();
-    const jobIndex = jobs.findIndex(j => j.id === params.id);
+    const jobIndex = jobs.findIndex(j => j.id === id); // Use 'id' instead of 'params.id'
 
     if (jobIndex === -1) {
       return NextResponse.json(

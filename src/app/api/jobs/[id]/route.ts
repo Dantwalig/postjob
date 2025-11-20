@@ -5,11 +5,12 @@ import type { Job } from '@/types';
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const jobs = await getJobs();
-    let job = jobs.find((j: Job) => j.id === params.id);
+    let job = jobs.find((j: Job) => j.id === id);
 
     if (!job) {
       return NextResponse.json(
@@ -40,12 +41,13 @@ export async function GET(
 
 export async function PATCH(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params;
     const body = await request.json();
     const jobs = await getJobs();
-    const jobIndex = jobs.findIndex((j: Job) => j.id === params.id);
+    const jobIndex = jobs.findIndex((j: Job) => j.id === id);
 
     if (jobIndex === -1) {
       return NextResponse.json(
